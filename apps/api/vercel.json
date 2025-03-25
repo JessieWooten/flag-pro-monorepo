@@ -1,4 +1,15 @@
 {
   "version": 2,
+  "builds": [
+    {
+      "src": "/src/main.ts",
+      "use": "@vercel/node",
+      "config": {
+        "installCommand": "yarn install",
+        "buildCommand": "npx turbo build --filter=api",
+        "output": "dist"
+      }
+    }
+  ],
   "rewrites": [{ "source": "/(.*)", "destination": "/src/main.ts" }]
 }
