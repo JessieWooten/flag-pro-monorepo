@@ -6,7 +6,7 @@
       "use": "@vercel/node",
       "config": {
         "installCommand": "yarn install",
-        "buildCommand": "npx turbo build --filter=api && yarn copy-repo-packages",
+        "buildCommand": "npx turbo build",
         "output": "dist"
       }
     }
